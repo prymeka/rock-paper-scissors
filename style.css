@@ -65,8 +65,7 @@ main {
   align-items: center;
 }
 
-#top-cards,
-#bottom-cards {
+.cards-container {
   flex: 1;
   display: flex;
   align-items: center;
@@ -80,4 +79,38 @@ main {
   margin: 0;
 }
 
-/* top cards hover effect */
+.top-card,
+.bottom-card {
+  width: 15rem;
+  height: 15rem;
+}
+
+.top-card button,
+.bottom-card button {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  padding: 1rem 1.5rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.top-card button:hover {
+  cursor: pointer;
+}
+
+.top-card .rock-btn,
+.bottom-card .rock-btn {
+  background-image: url(./rock.png);
+}
+
+.top-card .paper-btn,
+.bottom-card .paper-btn {
+  background-image: url(./paper.png);
+}
+
+.top-card .scissors-btn,
+.bottom-card .scissors-btn {
+  background-image: url(./scissors.png);
+}
