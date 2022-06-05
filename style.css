@@ -10,7 +10,7 @@ body {
 
 header {
   text-align: center;
-  margin: 0;
+  margin: -1rem;
   padding: 0;
 }
 
@@ -38,10 +38,10 @@ aside {
   gap: 6rem;
 }
 
-aside h2 {
+aside h3 {
   text-align: center;
   color: white;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 #reset-btn {
@@ -82,8 +82,8 @@ main {
 .top-card,
 .bottom-card {
   position: relative;
-  width: 15rem;
-  height: 15rem;
+  width: 12rem;
+  height: 12rem;
 }
 
 .top-card button,
