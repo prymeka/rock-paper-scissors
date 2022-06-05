@@ -44,7 +44,7 @@ aside h2 {
   font-size: 3rem;
 }
 
-aside button {
+#reset-btn {
   background-color: hsla(0, 0%, 83%, 0.5);
   border-radius: 1rem;
   text-align: center;
@@ -52,7 +52,7 @@ aside button {
   font-size: 1.2rem;
 }
 
-aside button:hover {
+#reset-btn:hover {
   background-color: hsla(0, 0%, 83%, 0.9);
   cursor: pointer;
 }
