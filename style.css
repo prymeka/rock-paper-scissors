@@ -95,6 +95,7 @@ main {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  border-radius: 1rem;
 }
 
 .top-card button:hover {
