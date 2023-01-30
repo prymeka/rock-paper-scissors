@@ -4,50 +4,57 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="js/nav.js" defer></script>
+    <script src="js/main.js" defer></script>
     <title>Rock Paper Scissors</title>
   </head>
   <body>
-    <header>
-      <h1>Rock Paper Scissors</h1>
-    </header>
-    <div id="body">
-      <aside>
-        <h3>Player</h3>
-        <p></p>
-        <h3>Computer</h3>
-      </aside>
-      <main>
+    <nav>
+      <h1 id="nav-brand"><a href="./index.html" id="nav-brand-link">Rock Paper Scissors</a></h1>
+      <ul id="nav-items">
+        <li class="nav-item"><a href="./index.html">Home</a></li>
+        <li class="nav-item"><a href="./about.html">About</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div id="main-left">
+        <p class="title">Computer</p>
+        <form class="mode-options-form">
+          <select name="mode-options" id="mode-options">
+            <option value="random">Random</option>
+            <option value="ai">AI</option>
+          </select>
+        </form>
         <div class="cards-container">
-          <div class="top-card">
-            <button class="rock-btn"></button>
-          </div>
-          <div class="top-card">
-            <button class="paper-btn"></button>
-          </div>
-          <div class="top-card">
-            <button class="scissors-btn"></button>
-          </div>
+          <div class="card"><button class="computer-card rock"></button></div>
+          <div class="card"><button class="computer-card paper"></button></div>
+          <div class="card"><button class="computer-card scissors"></button></div>
         </div>
-        <div id="score">
-          <h2>0 - 0</h2>
-        </div>
+        <div class="score-container"><p id="computer-score">0</p></div>
+      </div>
+      <div id="main-right">
+        <p class="title">Player</p>
+        <form style="visibility: hidden;">
+          <select name="none">
+            <option value="none"></option>
+            <option value="none"></option>
+          </select>
+        </form>
         <div class="cards-container">
-          <div class="bottom-card">
-            <button class="rock-btn"></button>
-          </div>
-          <div class="bottom-card">
-            <button class="paper-btn"></button>
-          </div>
-          <div class="bottom-card">
-            <button class="scissors-btn"></button>
-          </div>
+          <div class="card"><button class="player-card rock"></button></div>
+          <div class="card"><button class="player-card paper"></button></div>
+          <div class="card"><button class="player-card scissors"></button></div>
         </div>
-      </main>
-      <aside>
-        <button id="reset-btn"><b>Reset</b></button>
-      </aside>
+        <div class="score-container"><p id="player-score">0</p></div>
+      </div>
+    </main>
+    <div id="reset-button-container">
+      <button type="button" id="reset-button">Reset</button>
     </div>
+    <footer>
+      <p>&copy; All rights reserved.</p>
+    </footer>
   </body>
 </html>

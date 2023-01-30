@@ -1,0 +1,116 @@
+:root {
+  --color-primary: #004d6b;
+  --color-secondary: #f9ad0f;
+  --color-tertiary: #faf7f7;
+  --card-size: 11rem;
+  --hover-alpha: rgba(255, 255, 255, 0.2);
+}
+
+/* CSS Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 18px;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+button,
+input {
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+/* General */
+
+body {
+  height: 100vh;
+  width: 100vw;
+  min-width: 400px;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-primary);
+  color: var(--color-tertiary);
+  text-align: center;
+}
+
+a {
+  color: var(--color-tertiary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-tertiary);
+  text-decoration: underline;
+}
+
+/* Navbar */
+
+nav {
+  width: 100%;
+  min-height: 3.25rem;
+  background-color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+}
+
+#nav-brand-link {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  text-align: left;
+}
+
+#nav-brand-link:hover {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 660px) {
+  #nav-brand-link {
+    text-content: "RPS";
+  }
+}
+
+#nav-items {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav-item {
+  padding: 0.3rem 1.2rem;
+  margin: 0 0.2rem;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  transition: all 0.1s ease-in;
+}
+
+.nav-item:hover {
+  background-color: var(--hover-alpha);
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  padding: 0.5rem 0;
+  width: 100%;
+}
