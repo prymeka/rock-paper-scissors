@@ -25,11 +25,11 @@
         <p>The strategy used by the "AI" is based on <a href="https://www.wikihow.com/Win-at-Rock%2C-Paper%2C-Scissors">this tutorial</a>.</p>
         <p>
           The strategy is as follows: 
-          <ul>
+          <ul id="strat-rules">
             <li>Paper is always thrown in the first round as male players usually lead with rock. Moreover, in any round, rock is the most frequent, and scissors the least frequent, choice with probabilities of 35.4% and 29.6%, respectively.</li>
             <li>If the player chooses the same move twice in a row, they are unlikely to do so for the third time, instead they will probably use the next move in the rock-paper-scissors sequence. Hence, in such scenarios, a move that will trump player's expected choice is played.</li>
             <li>After a lost round, a move that was not played in the last round will be played.</li>
-            <li>In any other case, moves are randomly chosen, with rock, paper, and scissors having probabilities of 35%, 40%, and 25%, respectively.</li>
+            <li>In any other case, moves are randomly chosen, with rock, paper, and scissors having probabilities of 35%, 40%, and 25%, respectively. This is done to exploit the fact that rock is most frequent move and scissors the least frequent move.</li>
             <li>The priority of rules is the same as their listing order.</li>
           </ul>
         </p>
