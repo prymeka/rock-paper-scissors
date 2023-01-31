@@ -62,9 +62,18 @@ main {
   transition: box-shadow, transform 0.3s ease-in-out;
 }
 
-.player-card:hover {
+.transition:hover {
   box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 9px 30px 0 rgba(0, 0, 0, 0.19);
   transform: translateY(-10px);
+}
+
+.selected {
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 9px 30px 0 rgba(0, 0, 0, 0.19);
+  transform: translateY(-10px);
+}
+
+.not-selected {
+  transform: translateY(10px);
 }
 
 .computer-card:hover {
@@ -81,15 +90,6 @@ main {
 
 .scissors {
   background-image: url(../assets/scissors.png);
-}
-
-.selected {
-  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 9px 30px 0 rgba(0, 0, 0, 0.19);
-  transform: translateY(-10px);
-}
-
-.not-selected {
-  transform: translateY(10px);
 }
 
 /* Score */

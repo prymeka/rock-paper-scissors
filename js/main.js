@@ -91,6 +91,8 @@ function runGame(playerSelection) {
       c.classList.add("selected");
     } else {
       c.classList.add("not-selected");
+      c.classList.remove("transition");
+      c.classList.add("no-transition");
     }
   });
     
@@ -178,10 +180,12 @@ function resetSelections() {
   // change score labels' colour
   playerScore.style.color = "var(--color-tertiary)";
   computerScore.style.color = "var(--color-tertiary)";
-  // unhide all cards
+  // unselect all cards
   playerCards.forEach(c => {
     c.classList.remove("selected");
     c.classList.remove("not-selected");
+    c.classList.remove("no-transition");
+    c.classList.add("transition");
   });
   computerCards.forEach(c => {
     c.classList.remove("selected");
@@ -192,6 +196,7 @@ function resetSelections() {
 function resetGame() {
   playerScore.textContent = "0";
   computerScore.textContent = "0";
+  score = [0, 0];
   turn = 0;
   lastPlayedPlayer = [];
   lastPlayedComputer = [];
