@@ -26,3 +26,6 @@ main {
   background-color: var(--color-secondary);
 }
 
+#strat-rules {
+  text-align: left;
+}
