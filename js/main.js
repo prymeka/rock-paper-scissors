@@ -51,15 +51,12 @@ function aiCard() {
   let leng = lastPlayedPlayer.length;
   if (turn === 0) {
     // first round is always rock
-    console.log("first");
     return "rock";
   } else if (lastPlayedPlayer.length > 1 && lastPlayedPlayer[leng-1] === lastPlayedPlayer[leng-2]) {
     // if the player chooses same move twice, he will play next in sequence in this round
-    console.log("rowtwo");
     let idx = (possibleSelections.indexOf(lastPlayedPlayer[leng-1])+2)%3;
     return possibleSelections[idx];
   } else if (lastThreeWinners[lastThreeWinners.length-1] === "player") {
-    console.log("lost");
     // after a lost round, play move that was not played in the last ronud
     let lastIdx = possibleSelections.indexOf(lastPlayedComputer[lastPlayedComputer.length-1]);
     let idx = Math.floor(Math.random()*2);
@@ -69,7 +66,6 @@ function aiCard() {
     return possibleSelections[idx];
   } else {
     // play random move with adjusted probabilities
-    console.log("rand");
     let idx;
     let p = Math.random();
     if (p < 0.35) {
